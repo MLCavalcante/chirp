@@ -27,7 +27,7 @@ const ProfileFeed = (props:{userId: string}) => {
 
 
 
-const SinglePostPage: NextPage<{username: string}> = ({username}) => {
+const ProfilePage: NextPage<{username: string}> = ({username}) => {
   
 
   const {data} = api.profile.getUserByUsername.useQuery({
@@ -85,4 +85,4 @@ return {
 
  }
 
-export default SinglePostPage;
+export default  ProfilePage;

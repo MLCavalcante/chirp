@@ -76,7 +76,11 @@ const CreatePostWizard = () =>{
 const Feed = () => {
   const {data, isLoading: postsLoading} = api.posts.getAll.useQuery()
 
-  if (postsLoading) return <LoadingPage />;
+  if (postsLoading) return (
+    <div className="flex grow">
+      <LoadingPage />
+    </div>
+  );
 
   if (!data) return <div>Something went wrong...</div>;
 
